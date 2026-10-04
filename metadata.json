@@ -1,0 +1,6 @@
+{
+  "name": "Momentum (念)",
+  "description": "Momentum (念) 是一款将自我成长、人脉星系与世界影响融合为一的同心圆人生管理应用。融入数字禅设计，提供律动系统、星系网络与涟漪影响记录，并搭载专属的 Momentum Coach 观察并发现你生命中的微小光芒与动能。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

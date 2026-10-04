@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --theme-primary: #fbbf24;
+  --theme-primary-light: #fcd34d;
+  --theme-primary-dark: #d97706;
+  --theme-fg: #020617;
+  --theme-glow: rgba(251, 191, 36, 0.2);
+  --theme-accent-bg: rgba(251, 191, 36, 0.1);
+  --theme-accent-border: rgba(251, 191, 36, 0.3);
+  --theme-accent-text: #fcd34d;
+}
+
+/* Theme-aware utility classes */
+.bg-theme-primary {
+  background-color: var(--theme-primary);
+}
+.bg-theme-primary-light {
+  background-color: var(--theme-primary-light);
+}
+.bg-theme-accent {
+  background-color: var(--theme-accent-bg);
+}
+.text-theme-primary {
+  color: var(--theme-primary);
+}
+.text-theme-light {
+  color: var(--theme-primary-light);
+}
+.text-theme-accent {
+  color: var(--theme-accent-text);
+}
+.text-theme-fg {
+  color: var(--theme-fg);
+}
+.border-theme {
+  border-color: var(--theme-accent-border);
+}
+.border-theme-strong {
+  border-color: var(--theme-primary);
+}
+.shadow-theme-glow {
+  box-shadow: 0 10px 25px -5px var(--theme-glow);
+}
+.ring-theme {
+  --tw-ring-color: var(--theme-primary);
+}
+
+/* Gradient button */
+.btn-theme-primary {
+  background: linear-gradient(to right, var(--theme-primary), var(--theme-primary-dark));
+  color: var(--theme-fg);
+  box-shadow: 0 10px 15px -3px var(--theme-glow);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn-theme-primary:hover {
+  background: linear-gradient(to right, var(--theme-primary-light), var(--theme-primary));
+}
+
+/* Accent badge */
+.badge-theme {
+  background-color: var(--theme-accent-bg);
+  color: var(--theme-accent-text);
+  border-color: var(--theme-accent-border);
+}
+
+/* Accent card border */
+.card-accent-top {
+  border-top-width: 2px;
+  border-top-color: var(--theme-accent-border);
+}
+.card-accent-left {
+  border-left-width: 2px;
+  border-left-color: var(--theme-accent-border);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--theme-primary);
+  color: var(--theme-fg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-accent-border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--theme-primary);
+}
